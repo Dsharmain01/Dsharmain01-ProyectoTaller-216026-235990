@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Reservar Cita – Paso 2</title>
+  <link rel="stylesheet" href="estilos.css">
+  <script src="codigo.js" defer></script>
+</head>
+<body>
+   <header class="site-header">
+    <div class="container header-content">
+      <!-- Icono usuario (lleva a login) -->
+      <a href="login.html" class="user-icon">
+        <img src="Imagenes/Main/iconouser.png" alt="Login">
+      </a>
+
+      <!-- Título centrado -->
+       <a href="index.html" class="site-title">Estilo Clásico</a>
+
+      <!-- Hamburguesa y nav -->
+      <button class="menu-btn" id="menuBtn" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="main-nav" id="mainNav">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="servicios.html">Servicios</a></li>
+          <li><a href="galeria.html">Galería</a></li>
+          <li><a href="reserva.html">Reservar Cita</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="reservation-intro">
+      <div class="container">
+        <h2>Servicio: <span id="chosenService"></span></h2>
+        <hr class="divider">
+      </div>
+    </section>
+
+<section class="container">
+  <div class="contact-card">  
+    <h3>Elige tu barbero</h3>
+    <select id="barberSelect">
+      <option value="any" selected>Cualquier Barbero</option>
+      <option value="Juan Rodríguez">Juan Rodríguez</option>
+      <option value="Pedro Perez">Pedro Perez</option>
+      <option value="Francisco Vazques">Francisco Vazques</option>
+      <option value="Gloria Peña">Gloria Peña</option>
+    </select>
+    <button id="toStep3" class="btn">Continuar</button>
+  </div>
+</section>
+  </main>
+
+   <!-- FOOTER (sin cambios) -->
+<footer class="site-footer">
+  <div class="container footer-content">
+
+    <!-- Agrupamos cada icono + texto dentro de un solo enlace -->
+    <div class="social-links">
+      <a href="https://facebook.com" target="_blank">
+        <img src="Imagenes/Main/iconoface.png" alt="Facebook">
+        <span>Estilo_Clasico</span>
+      </a>
+      <a href="https://wa.me/59898838906" target="_blank">
+        <img src="Imagenes/Main/iconowpp.png" alt="WhatsApp">
+        <span>+598 98838906</span>
+      </a>
+      <a href="https://instagram.com" target="_blank">
+        <img src="Imagenes/Main/iconoig.png" alt="Instagram">
+        <span>Estilo_Clasico</span>
+      </a>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Contacto – Estilo Clásico</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-content">
+      <a href="login.html" class="user-icon">
+        <img src="Imagenes/Main/iconouser.png" alt="Login">
+      </a>
+     <a href="index.html" class="site-title">Estilo Clásico</a>
+      <button class="menu-btn" id="menuBtn" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="main-nav" id="mainNav">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="servicios.html">Servicios</a></li>
+          <li><a href="galeria.html">Galería</a></li>
+          <li><a href="reserva.html">Reservar Cita</a></li>
+          <li><a href="contacto.html" class="active">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="contacto-intro">
+      <div class="container">
+        <h2>CONTACTO</h2>
+        <hr class="divider">
+      </div>
+    </section>
+
+    <section class="contact-cards">
+      <div class="container">
+        <!-- Tarjeta Ubicación -->
+        <div class="contact-card">
+          <img src="Imagenes/contacto/ubicacionicon.png" alt="Ubicación">
+          <h3>Ubicación</h3>
+          <p>Av. 18 de Julio 943</p>
+        </div>
+
+        <!-- Tarjeta Contacto -->
+        <div class="contact-card">
+          <img src="Imagenes/Main/iconowpp.png" alt="WhatsApp">
+          <h3>Contacto</h3>
+          <p>WhatsApp: 098 638 906</p>
+        </div>
+
+        <!-- Tarjeta Horarios -->
+        <div class="contact-card">
+          <img src="Imagenes/contacto/clockicon.png" alt="Horarios">
+          <h3>Horarios</h3>
+          <p>Lunes a Viernes: 09:00 a 18:00</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="contacto-footer-divider">
+      <div class="container">
+        <hr class="divider">
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+<footer class="site-footer">
+  <div class="container footer-content">
+
+    <!-- Agrupamos cada icono + texto dentro de un solo enlace -->
+    <div class="social-links">
+      <a href="https://facebook.com" target="_blank">
+        <img src="Imagenes/Main/iconoface.png" alt="Facebook">
+        <span>Estilo_Clasico</span>
+      </a>
+      <a href="https://wa.me/59898838906" target="_blank">
+        <img src="Imagenes/Main/iconowpp.png" alt="WhatsApp">
+        <span>+598 98838906</span>
+      </a>
+      <a href="https://instagram.com" target="_blank">
+        <img src="Imagenes/Main/iconoig.png" alt="Instagram">
+        <span>Estilo_Clasico</span>
+      </a>
+    </div>
+  </div>
+</footer>
+
+  <script>
+    // Toggle menú móvil
+    const btn = document.getElementById('menuBtn');
+    const nav = document.getElementById('mainNav');
+    btn.addEventListener('click', () => {
+      nav.classList.toggle('open');
+      btn.classList.toggle('open');
+    });
+  </script>
+</body>
+</html>

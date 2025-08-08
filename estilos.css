@@ -1,0 +1,575 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html, body {
+  height: 100%;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: sans-serif;
+  color: #222;
+}
+main {
+  flex: 1;
+}
+.container {
+  width: 90%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* 
+   HEADER & NAV
+*/
+.site-header {
+  background: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  padding: 0.75rem 0;
+}
+.user-icon img {
+  width: 24px;
+  display: block;
+}
+.site-title {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #000;
+}
+.menu-btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 25px;
+  height: 18px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.menu-btn span {
+  display: block;
+  height: 3px;
+  background: #000;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+.menu-btn.open span:nth-child(1) {
+  transform: translateY(7.5px) rotate(45deg);
+}
+.menu-btn.open span:nth-child(2) {
+  opacity: 0;
+}
+.menu-btn.open span:nth-child(3) {
+  transform: translateY(-7.5px) rotate(-45deg);
+}
+.main-nav {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.3s ease;
+}
+.main-nav.open {
+  transform: scaleY(1);
+}
+.main-nav ul {
+  list-style: none;
+}
+.main-nav li + li {
+  border-top: 1px solid #eee;
+}
+.main-nav a {
+  display: block;
+  padding: 0.75rem 1rem;
+  color: #000;
+  text-decoration: none;
+}
+@media (min-width: 1600px) {
+  .menu-btn {
+    display: none;
+  }
+  .main-nav {
+    position: static;
+    transform: none;
+    background: transparent;
+    width: auto;
+  }
+  .main-nav ul {
+    display: flex;
+    gap: 1rem;
+  }
+  .main-nav li + li {
+    border: none;
+  }
+  .main-nav a {
+    padding: 0;
+    color: #000;
+  }
+}
+
+/*
+   FOOTER
+*/
+.site-footer {
+  background: #111;
+  color: #fff;
+  padding: 1rem 0;
+  margin-top: auto;
+}
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+.social-links {
+  display: flex;
+  gap: 1rem;
+}
+.social-links a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #fff;
+  font-size: 0.85rem;
+}
+.social-links a img {
+  width: 20px;
+  margin-right: 0.4rem;
+}
+.brand-name {
+  font-size: 0.8rem;
+  opacity: 0.8;
+}
+
+/*
+   BOTONES COMUNES
+*/
+.btn,
+.btn-estatico,
+.section-btn {
+  border-radius: 4px;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: inline-block;
+}
+.btn {
+  background: #e0c163;
+  color: #000;
+  padding: 0.75rem 2rem;
+  font-weight: bold;
+}
+.btn-estatico {
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  padding: 0.5rem 1.5rem;
+  display: block;
+  margin: 1rem auto;
+  width: max-content;
+}
+.section-btn {
+  position: absolute;
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  padding: 0.5rem 1.5rem;
+  z-index: 2;
+}
+/*
+   HERO (index.html)
+ */
+.hero {
+  position: relative;
+  background: url('Imagenes/Main/tradyestilo.png') center/contain no-repeat;
+  background-color: #1B1B1B;
+  height: 380px;
+}
+.hero .btn {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+/* 
+   SECCIONES OVERLAY (previews en index.html)
+*/
+.section.overlay-bg {
+  position: relative;
+  height: 200px;
+  margin: 1rem 0;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.servicios {
+  background-image: url('Imagenes/Main/barba1.jpg');
+}
+.nosotros {
+  background-image: url('Imagenes/Main/nosotros.png');
+}
+.galeria {
+background-image: url('Imagenes/Main/Cortes.png');
+}
+.section-btn {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.mapa img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  display: block;
+}
+
+/* 
+   CONTACTO (contacto.html)
+*/
+.contacto-intro {
+  padding: 2rem 0 1rem;
+}
+.contacto-intro h2 {
+  font-size: 1.75rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+.contacto-intro .divider {
+  width: 80px;
+  height: 2px;
+  background: #000;
+  border: none;
+  margin: 0 auto;
+}
+.contact-cards .container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  max-width: 600px;
+  margin: 1rem auto;
+}
+@media (min-width: 600px) {
+  .contact-cards .container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.contact-card {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 1.5rem;
+  text-align: center;
+}
+.contact-card img {
+  width: 40px;
+  margin-bottom: 0.75rem;
+}
+.contact-card h3 {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+}
+.contact-card p {
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+.contacto-footer-divider .divider {
+  margin: 2rem auto;
+}
+
+
+/* 
+   RESERVA PASO A PASO (reserva*.html)
+*/
+.reservation-intro {
+  padding: 2rem 0 1rem;
+}
+.reservation-intro h2 {
+  font-size: 1.75rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+.reservation-intro .divider {
+  width: 80px;
+  height: 2px;
+  background: #000;
+  border: none;
+  margin: 0 auto;
+}
+
+/* Paso 1: elección de servicio */
+.reservation-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1rem;
+  max-width: 600px;
+  margin: 1rem auto;
+}
+.reservation-card {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  overflow: hidden;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+.reservation-card:hover {
+  transform: translateY(-4px);
+}
+.reservation-card img {
+  width: 100%;
+  display: block;
+}
+.reservation-card h3 {
+  margin: 0.5rem 0;
+}
+.reservation-card p {
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Paso 2, 3, 4: formularios */
+.container > .contact-card,
+.container > form {
+  margin: 1rem auto;
+  max-width: 400px;
+}
+.contact-card select,
+.contact-card input {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+}
+#timeSelect[disabled] {
+  opacity: 0.6;
+}
+
+/* Paso 4: mensaje de éxito */
+#successMessage {
+  text-align: center;
+}
+
+
+/* 
+   PASO 1: seleccionar servicio
+*/
+.reservation-grid {
+  display: grid;
+  grid-template-columns: repeat(auto‑fit, minmax(160px, 1fr));
+  gap: 1rem;
+  grid-auto-rows: 1fr;
+}
+
+.reservation-card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.reservation-card:hover {
+  transform: translateY(-4px);
+}
+
+.reservation-card img {
+  width: 100%;
+  height: 180px;        
+  object-fit: cover;    
+  display: block;
+}
+
+
+.reservation-card h3,
+.reservation-card p {
+  text-align: center;
+  margin: 0.5rem 0;
+}
+
+
+/*
+   LOGIN 
+*/
+.contact-cards {
+  padding: 2rem 0;
+}
+.contact-cards h2 {
+  font-size: 1.75rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+.login-form {
+  max-width: 320px;
+  margin: 1rem auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.containerLogin{
+ 
+  width: 90%;
+  max-width: 600px;
+  margin: 0 auto;
+
+}
+
+.login-form label {
+  font-weight: bold;
+}
+.login-form input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.login-form button {
+  width: 100%;
+  padding: 0.75rem;
+  background: #e0c163;
+  color: #000;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/*
+   ADMIN (admin.html)
+*/
+.agenda-intro {
+  padding: 2rem 0;
+}
+.agenda-intro h2 {
+  font-size: 1.75rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+.agenda-intro label {
+  display: block;
+  margin: 0.5rem 0;
+  font-weight: bold;
+}
+#agendaDate {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  max-width: 200px;
+  margin-bottom: 1rem;
+}
+
+/* Tabla de agenda */
+#agendaTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+}
+#agendaTable th,
+#agendaTable td {
+  border: 1px solid #ccc;
+  padding: 0.5rem;
+  text-align: left;
+  font-size: 0.95rem;
+}
+#agendaTable th {
+  background: #f5f5f5;
+}
+
+/* Botones admin */
+#downloadBtn,
+#logoutBtn {
+  display: inline-block;
+  margin-right: 0.5rem;
+}
+
+
+/*
+   AJUSTES ESPECÍFICOS PARA DESKTOP
+*/
+@media (min-width: 1024px) {
+  .container {
+    width: 80%;
+    max-width: 1200px;
+  }
+
+  /* 2) Hero / Inicio: más altura */
+  .hero {
+    height: 500px;
+  }
+
+  /* 3) Previews de sección (index.html)*/
+  .section.overlay-bg,
+  #galeria {
+    margin: 1.5rem 0;
+    height: 250px;
+  }
+  .overlay-bg,
+  #galeria {
+    display: inline-block;
+    width: calc(33.333% - 1rem);
+    margin-right: 1.5%;
+  }
+  .overlay-bg:last-of-type,
+  #galeria {
+    margin-right: 0;
+  }
+
+  /* Contacto  */
+  .contact-cards .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /*Reserva */
+  .reservation-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+
+  /* Login*/
+  .login-form {
+    max-width: 400px;
+  }
+
+  /*Admin*/
+  #agendaTable {
+    font-size: 1rem;
+  }
+  #agendaTable th, #agendaTable td {
+    padding: 0.75rem;
+  }
+
+  /*Footer*/
+  .footer-content {
+    justify-content: space-between;
+  }
+  .social-links {
+    gap: 2rem;
+  }
+}
+

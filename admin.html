@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Agenda – Estilo Clásico (Admin)</title>
+  <link rel="stylesheet" href="estilos.css">
+  <script src="codigo.js" defer></script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-content">
+      <a href="index.html" class="site-title">Estilo Clásico</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="contacto-intro">
+      <div class="container">
+        <h2>AGENDA COMPLETA</h2>
+        <hr class="divider">
+
+        <label for="agendaDate">Selecciona fecha:</label>
+        <input type="date" id="agendaDate">
+      </div>
+    </section>
+
+    <section class="services-list">
+      <div class="container">
+        <table id="agendaTable">
+          <thead>
+            <tr>
+              <th>Servicio</th>
+              <th>Barbero</th>
+              <th>Hora</th>
+            </tr>
+          </thead>
+          <tbody>
+          </tbody>
+        </table>
+
+        <button id="downloadBtn" class="btn">Descargar CSV</button>
+        <button id="logoutBtn" class="btn">Cerrar Sesión</button>
+      </div>
+    </section>
+  </main>
+
+<footer class="site-footer">
+  <div class="container footer-content">
+    <div class="social-links">
+      <a href="https://facebook.com" target="_blank">
+        <img src="Imagenes/Main/iconoface.png" alt="Facebook">
+        <span>Estilo_Clasico</span>
+      </a>
+      <a href="https://wa.me/59898838906" target="_blank">
+        <img src="Imagenes/Main/iconowpp.png" alt="WhatsApp">
+        <span>+598 98838906</span>
+      </a>
+      <a href="https://instagram.com" target="_blank">
+        <img src="Imagenes/Main/iconoig.png" alt="Instagram">
+        <span>Estilo_Clasico</span>
+      </a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Reservar Cita – Paso 4</title>
+  <link rel="stylesheet" href="estilos.css">
+  <script src="codigo.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-content">
+      <!-- Icono usuario (lleva a login) -->
+      <a href="login.html" class="user-icon">
+        <img src="Imagenes/Main/iconouser.png" alt="Login">
+      </a>
+
+      <!-- Título centrado -->
+       <a href="index.html" class="site-title">Estilo Clásico</a>
+
+      <!-- Hamburguesa y nav -->
+      <button class="menu-btn" id="menuBtn" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="main-nav" id="mainNav">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="servicios.html">Servicios</a></li>
+          <li><a href="galeria.html">Galería</a></li>
+          <li><a href="reserva.html">Reservar Cita</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="reservation-intro">
+      <div class="container">
+        <h2>Confirmar Reserva</h2>
+        <hr class="divider">
+      </div>
+    </section>
+
+    <section class="container">
+      <div class="contact-card">
+        <p><strong>Servicio:</strong> <span id="sumService"></span></p>
+        <p><strong>Barbero:</strong> <span id="sumBarber"></span></p>
+        <p><strong>Fecha:</strong> <span id="sumDate"></span></p>
+        <p><strong>Hora:</strong> <span id="sumTime"></span></p>
+      </div>
+
+      <form id="finalForm" class="contact-card">
+        <label>Nombre completo*<br>
+          <input type="text" id="fullName" required>
+        </label>
+        <label>Correo electrónico*<br>
+          <input type="email" id="email" required>
+        </label>
+        <label>Teléfono*<br>
+          <input type="tel" id="phone" required>
+        </label>
+        <button type="submit" class="btn">Reservar</button>
+      </form>
+
+      <!-- Aquí se mostrará el mensaje de éxito -->
+      <div id="successMessage" class="contact-card" style="display:none;">
+        <p>¡Reserva exitosa!</p>
+        <button id="exitBtn" class="btn">Salir</button>
+      </div>
+    </section>
+  </main>
+
+     <!-- FOOTER (sin cambios) -->
+<footer class="site-footer">
+  <div class="container footer-content">
+
+    <!-- Agrupamos cada icono + texto dentro de un solo enlace -->
+    <div class="social-links">
+      <a href="https://facebook.com" target="_blank">
+        <img src="Imagenes/Main/iconoface.png" alt="Facebook">
+        <span>Estilo_Clasico</span>
+      </a>
+      <a href="https://wa.me/59898838906" target="_blank">
+        <img src="Imagenes/Main/iconowpp.png" alt="WhatsApp">
+        <span>+598 98838906</span>
+      </a>
+      <a href="https://instagram.com" target="_blank">
+        <img src="Imagenes/Main/iconoig.png" alt="Instagram">
+        <span>Estilo_Clasico</span>
+      </a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
